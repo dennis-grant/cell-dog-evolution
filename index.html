@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>cell dog evolution</title>
+
+<style type="text/css"/>
+<!--
+@import url("cde.css");
+-->
+</style>
+
+<script type="text/javascript" src="js/jquery-1.8.2.js"></script>
+<script type="text/javascript" src="js/cde.js"></script>
+<script type="text/javascript" src="js/dog-house.js"></script>
+<script type="text/javascript" src="js/dna.js"></script>
+<script type="text/javascript" src="js/cell-dog.js"></script>
+<script type="text/javascript" src="js/canine-assassin.js"></script>
+<script type="text/javascript" src="js/control-panel.js"></script>
+<script type="text/javascript">
+var house;
+var assassin;
+var cpanel;
+
+
+$(document).ready(function() {
+	var dog;
+	var dna;
+
+	house = new CDE.DogHouse(34, 34, 20, 20, "#0000ff");
+	for (var j = 1; j <= 200; j++) {
+		dna = new CDE.DogDNA(30, 30, CDE.PatternGenerator2);
+		dog = new CDE.CellDog(dna, 30, 30);
+		dog.occupyCell(house);
+	}
+	assassin = new CDE.CanineAssassin(house);
+	cpanel = new CDE.ControlPanel(house, assassin);
+
+	$("#mainDisplayArea").append(cpanel.controlElement);
+	$("#mainDisplayArea").append(house.controlElement);
+});
+</script>
+</head>
+<body>
+
+<div class="instructions">
+	<div class="title">Instructions:</div>
+	<div class="text">Turn on the lights in the dog-house and watch the cell-dogs try to hide from the canine-assassin by evolving to match the background color.</div>
+</div>
+
+<div id="mainDisplayArea"></div>
+
+</body>
+</html>

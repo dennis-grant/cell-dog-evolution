@@ -1,0 +1,54 @@
+.instructions {
+	margin-bottom: 5px;
+}
+
+.instructions .title {
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.instructions .text {
+	font-size: 14px;
+	font-style: italic;
+	color: #0000ff;
+}
+
+#mainDisplayArea {
+	width: 920px;
+	height: 700px;
+}
+
+.control-panel {
+	float: left;
+	position: relative;
+	width: 220px;
+	margin-right: 10px;
+}
+
+.dog-house {
+	position: relative;
+	float: left;
+	width: 680px;
+	height: 680px;
+}
+
+.dog-house .bg, .dog-house .cells {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+.dog-house .bg {
+	opacity:0.4;
+}
+
+.cell-dog {
+	position: absolute;
+	background-color: #ffffff;
+}
+
+.cell-dog .stripe {
+	position: absolute;
+}
