@@ -7,6 +7,10 @@ var CDE = (function(module) {
 	};
 
 	var getRandomColor = function() {
+		return colorPallette[getRandomNumber(colorPallette.length) - 1]
+	};
+
+	var getRandomColor2 = function() {
 		var r, g, b;
 
 		r = getRandomColorPart();
@@ -14,7 +18,6 @@ var CDE = (function(module) {
 		b = getRandomColorPart();
 
 		return "#" + r + g + b;
-		//return colorPallette[getRandomNumber(colorPallette.length) - 1]
 	};
 
 	var getRandomColorPart = function() {

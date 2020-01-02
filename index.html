@@ -29,7 +29,7 @@ $(document).ready(function() {
 
 	house = new CDE.DogHouse(34, 34, 20, 20, "#0000ff");
 	for (var j = 1; j <= 200; j++) {
-		dna = new CDE.DogDNA(30, 30, CDE.PatternGenerator2);
+		dna = new CDE.DogDNA(30, 30, CDE.PatternGenerator1);
 		dog = new CDE.CellDog(dna, 30, 30);
 		dog.occupyCell(house);
 	}
